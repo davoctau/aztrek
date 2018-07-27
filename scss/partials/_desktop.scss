@@ -1,0 +1,260 @@
+/* -------------------------------
+            HEADER
+-------------------------------- */
+
+header {
+    flex-direction: row-reverse;
+    .tel {
+        font-size: 1.40em;
+        margin-bottom: 0;
+        margin-right: 2em;
+        width: 257px;
+        p {
+            padding-left: 1.5em;
+        }
+    }
+    .logo-header {
+        width: 100%;
+        img {
+            width: 325px;
+            height: 136px;
+        }
+    }
+    .burger {
+        display: none;
+    }
+    .main-nav {
+        display: block;
+        margin-left: 25em;
+        ul {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+        }
+        a {
+            display: block;
+            color: $black;
+            font-size: 1.75em;
+            font-family: $font-title;
+            padding-right: 1rem;
+            margin: 2rem 1rem 0rem;
+            border-right: solid 3px $black;
+            &:hover,
+            &:focus {
+                color: lighten($color: $orange, $amount: 20%);
+            }
+        }
+    }
+}
+
+/* ----------------------------
+            MAIN
+---------------------------- */
+
+.slider {
+    position: relative;
+    .texte {
+        display: block;
+        position: absolute;
+        bottom: 10rem;
+        left: 3rem;
+        width: 30%;
+        padding: 2rem 4rem;
+        background-color: #fff;
+        opacity: 0.7;
+        border-radius: 5px;
+        z-index: 3;
+        text-align: center;
+        h1 {
+            font-family: $font-default;
+            font-size: 3em;
+            margin: 0;
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 1.25em;
+            font-family: $font-default;
+        }
+    }
+    .slide-title {
+        position: absolute;
+        right: 6rem;
+        left: auto;
+        font-size: 4rem;
+        width: 20%;
+        text-align: right;
+        color: #fff;
+    }
+}
+
+.owl-carousel {
+    .owl-nav {
+        display: block;
+        button {
+            position: absolute;
+            bottom: 15px;
+            &::before {
+                content: '\f359';
+                font-family: "Font Awesome 5 Free";
+                font-size: 4rem;
+                color: #fff;
+            }
+            &.owl-prev {
+                left: 30px;
+                font-size: 0;
+            }
+            &.owl-next {
+                right: 30px;
+                font-size: 0;
+                &::before {
+                    content: '\f35a';
+                }
+            }
+        }
+    }
+}
+
+.destination {
+    h2 {
+        margin: 1em auto 2em;
+        font-size: 4em;
+    }
+    .bulles {
+        margin: 3em 10em;
+        img {
+            margin: 1em 5em;
+            width: 154px;
+        }
+        p {
+            font-size: 1.5em;
+        }
+    }
+    .cartes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 3em auto;
+        .img {
+            display: block;
+            margin: 2em 3em;
+        }
+    }
+}
+
+.experience {
+    justify-content: center;
+    padding-bottom: 4em;
+    h2 {
+        display: block;
+        width: 100%;
+        text-align: right;
+        font-size: 4em;
+    }
+    .carnet {
+        width: 50%;
+        .carnet-text {
+            h3 {
+                font-size: 3em;
+            }
+            p {
+                font-size: 2em;
+                margin-bottom: 2em;
+            }
+        }
+        a {
+            font-size: 2.5em;
+            margin-bottom: -30px;
+            border-radius: 40px;
+            border: solid 5px $orange;
+        }
+    }
+    .liens {
+        width: 40%;
+        margin-top: 7em;
+        margin-left: 5em;
+        p {
+            font-size: 1.75em;
+            text-align: right;
+            margin: 0 0 2em;
+        }
+        img {
+            display: inline-block;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+
+.equipe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    h2 {
+        font-size: 4em;
+        text-align: left;
+        width: 100%;
+        margin-top: 1em;
+    }
+    img {
+        display: block;
+        border-radius: 20px;
+        width: 510px;
+        height: 355px;
+        margin-top: 7em;
+    }
+    .presentation {
+        border-radius: 20px;
+        width: 500px;
+        margin: 0 0 3em;
+        h3 {
+            font-size: 3em;
+        }
+        p {
+            font-size: 2em;
+            font-weight: normal;
+        }
+        a {
+            font-size: 2em;
+            font-size: 2.5em;
+            margin-bottom: -30px;
+            border-radius: 40px;
+            border: solid 5px $orange;
+        }
+    }
+}
+
+/* ------------------------------
+            FOOTER
+------------------------------- */
+
+footer {
+    padding: 1em 15em 0em;
+    align-items: center;
+    .logo {
+        img {
+            width: 200px;
+            height: 93px;
+        }
+    }
+    .liens-rs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        list-style: none;
+        img {
+            margin: 1em;
+            width: 69px;
+        }
+    }
+    .logo-eco {
+        img {
+            width: 200px;
+            height: 93px;
+        }
+    }
+    .footer-copy {
+        p {
+            font-size: 1.25em;
+        }
+    }
+}
