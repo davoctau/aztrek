@@ -2,84 +2,56 @@
 require_once 'lib/functions.php';
 $utilisateur = current_user();
 ?>
-<!DOCTYPE html>
+
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <title>Ecolidaire - <?php echo $title; ?></title>
-        <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
 
-        <header class="site-header">
-            <div class="cta-header">
-                <div class="container">
-                    <ul class="cta-contact inline-list">
-                        <li>Téléphone : <a href="tel:0123456789">0123456789</a></li>
-                        <li>Email : <a href="mailto:contact@ecolidaire.fr">contact@ecolidaire.fr</a></li>
-                    </ul>
-                    <div class="cta-social">
-                        <ul class="inline-list">
-                         <?php if (empty($utilisateur)) : ?>
-                                <li>
-                                    <a href="admin/register.php">
-                                        <i class="fa fa-user-plus"></i>
-                                        Créer un compte
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="admin/login.php">
-                                        <i class="fa fa-sign-in"></i>
-                                        Se connecter
-                                    </a>
-                                </li>
-                            <?php else: ?>
-                                <?php if ($utilisateur["admin"] == 1) : ?>
-                                    <li>
-                                        <a href="admin/">
-                                            <i class="fa fa-toolbox"></i>
-                                            Administration
-                                        </a>
-                                    </li>
-                                <?php endif; ?>
-                                <li>
-                                    <a href="admin/logout.php">
-                                        <i class="fa fa-sign-out"></i>
-                                        Déconnexion
-                                    </a>
-                                </li>
-                            <?php endif; ?>
-                            <li>
-                                <a href="http://www.facebook.com">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="http://www.twitter.com">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="container main-header">
-                <a href="index.php" class="logo">
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-tree fa-stack-1x fa-inverse"></i>
-                    </span>
-                </a>
-                <?php require_once 'layout/nav.php'; ?>
-            </div>
-        </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="...">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Aztrek</title>
+  <link rel="shortcut icon" href="nouveau-logo.ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.sidr.light.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
 
-        <main>
+<body class="page-home">
+
+
+  <header class="container">
+
+    <div class="tel">
+      <img src="images/phone-call.png" alt="">
+      <p>02 99 56 89 43</p>
+    </div>
+
+    <a href="" class="logo-header">
+      <img src="images/nouveau-logo.jpg" alt="#">
+    </a>
+
+    <a class="burger" href="#sidr-main">
+      <i class="fa fa-bars" aria-hidden="true"></i>Menu
+    </a>
+
+    <nav class="main-nav">
+      <ul class="container">
+        <li>
+          <a href="#dest">Destinations Trek</a>
+        </li>
+        <li>
+          <a href="#exp">Partager vos expériences</a>
+        </li>
+        <li>
+          <a href="#team">Qui sommes-nous?</a>
+        </li>
+      </ul>
+    </nav>
+
+  </header class "container">
+
+  <main>

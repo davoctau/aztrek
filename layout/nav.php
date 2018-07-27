@@ -1,8 +1,7 @@
 <nav class="main-nav">
     <ul>
-        <li><a href="index.php">Accueil</a></li>
-        <li><a href="#">A propos</a></li>
-        <li><a href="projects.php">Nos actions</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="projects.php">Destinations Trek</a></li>
+        <li><a href="#">Partager vos expériences</a></li>
+        <li><a href="#">Qui sommes-nous?</a></li>
     </ul>
 </nav>

@@ -2,18 +2,18 @@
 require_once '../../../model/database.php';
 
 $id = $_GET["id"];
-$categorie = getOneEntity("categorie", $id);
+$pays = getOneEntity("pays", $id);
 
 require_once '../../layout/header.php';
 ?>
 
-<h1>Modifier une catégorie</h1>
+<h1>Modifier un pays</h1>
 
 <form action="update_query.php" method="post">
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">Libellé</label>
         <div class="col-sm-10">
-            <input type="text" name="libelle" value="<?php echo $categorie["libelle"]; ?>" class="form-control" placeholder="Libellé">
+            <input type="text" name="libelle" value="<?php echo $pays["libelle"]; ?>" class="form-control" placeholder="Libellé">
         </div>
     </div>
     <input type="hidden" name="id" value="<?php echo $id; ?>">

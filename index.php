@@ -1,56 +1,11 @@
-!doctype html>
-<html lang="fr">
+<?php
+require_once 'lib/functions.php';
+require_once 'model/database.php';
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="...">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Aztrek</title>
-  <link rel="shortcut icon" href="nouveau-logo.ico">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-    crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <link rel="stylesheet" href="css/jquery.sidr.light.min.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
+$list_projects = getAllProjects(3);
 
-<body class="page-home">
-
-
-  <header class="container">
-
-    <div class="tel">
-      <img src="images/phone-call.png" alt="">
-      <p>02 99 56 89 43</p>
-    </div>
-
-    <a href="" class="logo-header">
-      <img src="images/nouveau-logo.jpg" alt="#">
-    </a>
-
-    <a class="burger" href="#sidr-main">
-      <i class="fa fa-bars" aria-hidden="true"></i>Menu
-    </a>
-
-    <nav class="main-nav">
-      <ul class="container">
-        <li>
-          <a href="#dest">Destinations Trek</a>
-        </li>
-        <li>
-          <a href="#exp">Partager vos expériences</a>
-        </li>
-        <li>
-          <a href="#team">Qui sommes-nous?</a>
-        </li>
-      </ul>
-    </nav>
-
-  </header class "container">
-
-  <main>
+get_header("Accueil");
+?>
 
     <section class="slider">
 
@@ -169,48 +124,4 @@
 
     </section>
 
-  </main>
-
-  <footer>
-
-    <a href="" class="logo">
-      <img src="images/logo_noir-blanc.jpg" alt="">
-    </a>
-
-    <div class="liens-rs">
-      <a href="">
-        <img src="images/facebook-copie.png" alt="">
-      </a>
-      <a href="">
-        <img src="images/twitter-copie.png" alt="">
-      </a>
-      <a href="">
-        <img src="images/instagram-copie.png" alt="">
-      </a>
-      <a href="">
-        <img src="images/pinterest.png" alt="">
-      </a>
-    </div>
-
-    <a href="" class="logo-eco">
-      <img src="images/Logo_ATR copie.png" alt="">
-    </a>
-
-
-    <div class="footer-copy">
-      <p>Copyright - Mentions Légales - Crédit Photos</p>
-    </div>
-
-
-  </footer>
-
-
-
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery.sidr.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/scripts.js"></script>
-
-</body>
-
-</html>
+  <?php get_footer(); ?>
