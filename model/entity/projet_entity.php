@@ -73,7 +73,7 @@ function insertProjet(string $titre, string $image, string $date_debut, string $
     return $connexion->lastInsertId();
 }
 
-function updateProjet(int $id, string $titre, string $image, string $date_debut, string $date_fin, float $prix, string $description, int $categorie_id): int {
+function updateProjet(int $id, string $titre, string $photo, string $date_debut, string $date_fin, float $prix, string $description, int $categorie_id): int {
     /* @var $connexion PDO */
     global $connexion;
     

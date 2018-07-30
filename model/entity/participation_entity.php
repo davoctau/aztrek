@@ -59,3 +59,4 @@ function insertParticipation(float $montant, int $projet_id, int $utilisateur_id
     
     return $connexion->lastInsertId();
 }
+
