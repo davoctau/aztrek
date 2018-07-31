@@ -24,11 +24,42 @@ $utilisateur = current_user();
 
 
   <header class="container">
-
+                        
     <div class="tel">
       <img src="images/phone-call.png" alt="">
       <p>02 99 56 89 43</p>
     </div>
+      <ul class="inline-list">
+                         <?php if (empty($utilisateur)) : ?>
+                                <li>
+                                    <a href="admin/register.php">
+                                        <i class="fa fa-user-plus"></i>
+                                        Créer un compte
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="admin/login.php">
+                                        <i class="fa fa-sign-in"></i>
+                                        Se connecter
+                                    </a>
+                                </li>
+                            <?php else: ?>
+                                <?php if ($utilisateur["admin"] == 1) : ?>
+                                    <li>
+                                        <a href="admin/">
+                                            <i class="fa fa-toolbox"></i>
+                                            Administration
+                                        </a>
+                                    </li>
+                                <?php endif; ?>
+                                <li>
+                                    <a href="admin/logout.php">
+                                        <i class="fa fa-sign-out"></i>
+                                        Déconnexion
+                                    </a>
+                                </li>
+                            <?php endif; ?>
+      </ul>  
 
     <a href="" class="logo-header">
       <img src="images/nouveau-logo.jpg" alt="#">

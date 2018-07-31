@@ -1,7 +1,7 @@
 <?php
 require_once '../../../model/database.php';
 
-$list_sejours = getAllEntities("sejour");
+$list_sejours = getAllSejours();
 
 require_once '../../layout/header.php';
 ?>
@@ -15,6 +15,7 @@ require_once '../../layout/header.php';
 <table class="table table-striped table-bordered table-hover">
     <thead>
         <tr>
+            <th>Pays</th>
             <th>Titre</th>
             <th>Durée</th>
             <th>Niveau</th>
@@ -27,6 +28,7 @@ require_once '../../layout/header.php';
     <tbody>
         <?php foreach ($list_sejours as $sejour) : ?>
         <tr>
+            <td><?php echo $sejour["pays"]; ?></td>
             <td><?php echo $sejour["titre"]; ?></td>
             <td><?php echo $sejour["duree"]; ?></td>
             <td><?php echo $sejour["niveau"]; ?></td>

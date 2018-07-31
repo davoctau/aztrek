@@ -2,7 +2,7 @@
 require_once 'lib/functions.php';
 require_once 'model/database.php';
 
-$list_pays = getAllEntities("pays");
+$list_pays = getAllSejours("pays");
 
 get_header("Accueil");
 ?>
@@ -39,7 +39,7 @@ get_header("Accueil");
 
         <div class="bulles">
             <?php foreach ($list_pays as $pays) : ?>
-                <a href="#">
+                <a href="pays.php?id=<?php echo $pays["id"]; ?>">
                     <img src="uploads/<?php echo $pays["photo"]; ?>" alt="">
                     <p><?php echo $pays["nom"]; ?></p>
                 </a>
@@ -48,7 +48,7 @@ get_header("Accueil");
 
         <div class="cartes">
             <?php foreach ($list_pays as $pays) : ?>
-                <a href="#">
+                <a href="pays.php?id=<?php echo $pays["id"]; ?>">
                     <img src="uploads/<?php echo $pays["carte"]; ?>" alt="">
                 </a>
             <?php endforeach; ?>

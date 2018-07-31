@@ -17,16 +17,16 @@ function insertPays(string $nom, string $photo, string $carte, string $image_sli
     return $connexion->lastInsertId();
 }
 
-function updatePays(int $id, string $photo, string $carte, string $image_slider, string $titre_slider) {
+function updatePays(int $id, string $nom, string $photo, string $carte, string $image_slider, string $titre_slider) {
     /* @var $connexion PDO */
     global $connexion;
     
     $query = "UPDATE pays
-                SET titre = :titre,
+                SET nom = :nom,
                     photo = :photo,
                     carte = :carte,
                     image_slider = :image_slider,
-                    titre_slider = :titre_slider,               
+                    titre_slider = :titre_slider              
                 WHERE id = :id
             ";
     

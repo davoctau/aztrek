@@ -13,7 +13,7 @@ require_once '../../layout/header.php';
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">Nom</label>
         <div class="col-sm-10">
-            <input type="text" name="pays" value="<?php echo $pays["nom"]; ?>" class="form-control" placeholder="pays">
+            <input type="text" name="nom" value="<?php echo $pays["nom"]; ?>" class="form-control" placeholder="pays">
         </div>
     </div>
     <div class="form-group row">
@@ -40,13 +40,13 @@ require_once '../../layout/header.php';
             <img src="../../../uploads/<?php echo $pays["image_slider"]; ?>"  class="img-responsive img-thumbnail">
         </div>
         <div class="col-sm-9">
-            <input type="file" name="slider" value="<?php echo $pays["image_slider"]; ?>" class="form-control" placeholder="fichier_image">
+            <input type="file" name="image_slider" value="<?php echo $pays["image_slider"]; ?>" class="form-control" placeholder="fichier_image">
         </div>
     </div>
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">Titre slider</label>
         <div class="col-sm-10">
-            <input type="text" name="titre" value="<?php echo $pays["titre_slider"]; ?>" class="form-control" placeholder="texte">
+            <input type="text" name="titre_slider" value="<?php echo $pays["titre_slider"]; ?>" class="form-control" placeholder="texte">
         </div>
     </div>
     <input type="hidden" name="id" value="<?php echo $id; ?>">
