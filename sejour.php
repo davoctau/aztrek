@@ -7,7 +7,7 @@ if (!isset($_GET["id"])) {
 }
 
 $id = $_GET["id"];
-$pays = getOneEntity("pays", $id);
+$sejour = getAllSejours("sejour", $id);
 $list_sejours = getAllSejoursByPays($id);
 
 
@@ -15,7 +15,7 @@ get_header($pays["nom"]);
 ?>
 
 <section class= "container">
-    <h1><?php echo $pays["nom"]; ?></h1>
+    <h1><?php echo $sejour["titre"]; ?></h1>
 
     <?php foreach ($list_sejours as $sejour) : ?>
         <article>
@@ -29,7 +29,7 @@ get_header($pays["nom"]);
                 <em><?php echo $sejour["niveau"]; ?> jours</em>                
                 <br>
                 <em><?php echo $sejour["description"]; ?></em>
-                <input type="submit" value="choisir" />   
+                
             </div>
         </article>
     <?php endforeach; ?>
@@ -37,3 +37,4 @@ get_header($pays["nom"]);
 </section>
 
 <?php get_footer(); ?>
+

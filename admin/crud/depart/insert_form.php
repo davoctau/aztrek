@@ -1,13 +1,7 @@
 <?php 
-
 require_once '../../../model/database.php';
 
-$list_depart = getAllEntities("depart");
-
-$list_pays = getAllEntities("pays");
-
 $list_sejours = getAllEntities("sejour");
-
 
 require_once '../../layout/header.php';
 ?>
@@ -31,18 +25,6 @@ require_once '../../layout/header.php';
         <label class="col-sm-2 col-form-label">Nombre de places</label>
         <div class="col-sm-10">
             <input type="number" name="nbre_places" class="form-control" placeholder="places">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Pays</label>
-        <div class="col-sm-10">
-            <select name="pays_id" class="form-control">
-                <?php foreach ($list_pays as $pays) : ?>                    
-                    <option value="<?php echo $pays["id"]; ?>">
-                        <?php echo $pays["nom"]; ?>
-                    </option>
-                <?php endforeach; ?>
-            </select>
         </div>
     </div>
     <div class="form-group row">

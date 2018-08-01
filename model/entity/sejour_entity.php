@@ -21,6 +21,23 @@ function getAllSejours(int $limit = 999): array {
     return $stmt->fetchAll();
 }
 
+function getAllSejoursByPays(int $id): array {
+    global $connexion;
+
+    $query = "SELECT
+                sejour.*,
+                pays.nom as pays
+            FROM sejour
+            INNER JOIN pays ON pays.id = sejour.pays_id          
+            WHERE pays.id = :id;";
+
+    $stmt = $connexion->prepare($query);
+    $stmt->bindParam(":id", $id);
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}
+
 function getSejour(int $id): array {
     global $connexion;
 

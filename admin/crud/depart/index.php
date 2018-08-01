@@ -1,7 +1,7 @@
 <?php
 require_once '../../../model/database.php';
 
-$list_departs = getAllEntities("depart");
+$list_departs = getAllDeparts();
 
 require_once '../../layout/header.php';
 ?>
@@ -15,6 +15,8 @@ require_once '../../layout/header.php';
 <table class="table table-striped table-bordered table-hover">
     <thead>
         <tr>
+            <th>Pays</th>
+            <th>Séjour</th>
             <th>Date de départ</th>
             <th>Prix</th>
             <th>Nombre de places</th>   
@@ -24,6 +26,8 @@ require_once '../../layout/header.php';
     <tbody>
         <?php foreach ($list_departs as $depart) : ?>
         <tr>
+            <td><?php echo $depart["pays"]; ?></td>
+            <td><?php echo $depart["sejour"]; ?></td>
             <td><?php echo $depart["date_depart"]; ?></td>
             <td><?php echo $depart["prix"]; ?></td>
             <td><?php echo $depart["nbre_places"]; ?></td>                                   
