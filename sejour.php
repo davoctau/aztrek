@@ -7,28 +7,37 @@ if (!isset($_GET["id"])) {
 }
 
 $id = $_GET["id"];
-$sejour = getAllSejours("sejour", $id);
-$list_sejours = getAllSejoursByPays($id);
+$sejour = getOneEntity("sejour", $id);
+$list_departs = getAlldeparts($id);
 
 
-get_header($pays["nom"]);
+
+
+get_header("Accueil");
 ?>
 
 <section class= "container">
     <h1><?php echo $sejour["titre"]; ?></h1>
 
-    <?php foreach ($list_sejours as $sejour) : ?>
+    <?php foreach ($list_departs as $depart) : ?>
         <article>
-            <img src="uploads/<?php echo $sejour["photo"]; ?>" alt="">
+            
             <div>
-                <a href="sejour.php?id=<?php echo $sejour["id"]; ?>">
+                <a href="utilisateur.php?id=<?php echo $sejour["id"]; ?>">
                     <h2><?php echo $sejour["titre"]; ?></h2>
                 </a>
                 <em><?php echo $sejour["duree"]; ?> jours</em>                
                 <br>
-                <em><?php echo $sejour["niveau"]; ?> jours</em>                
+                <em>Niveau Trek <?php echo $sejour["niveau"]; ?> /5</em>                
                 <br>
                 <em><?php echo $sejour["description"]; ?></em>
+                <br>
+                <em>Départ le <?php echo $depart["date_depart"]; ?></em>
+                <br>
+                <em><?php echo $depart["prix"]; ?> €</em>
+                <br> 
+                <input type="submit" value="Réserver">
+               
                 
             </div>
         </article>

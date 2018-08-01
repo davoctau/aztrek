@@ -26,10 +26,11 @@ get_header($pays["nom"]);
                 </a>
                 <em><?php echo $sejour["duree"]; ?> jours</em>                
                 <br>
-                <em><?php echo $sejour["niveau"]; ?> jours</em>                
+                <em>Niveau Trek <?php echo $sejour["niveau"]; ?> /5</em>                
                 <br>
                 <em><?php echo $sejour["description"]; ?></em>
-                <input type="submit" value="choisir" />   
+                <br> 
+                <input type="submit" value="Choisir ce séjour">
             </div>
         </article>
     <?php endforeach; ?>
