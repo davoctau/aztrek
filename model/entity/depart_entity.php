@@ -21,10 +21,13 @@ function getAllDepartsBySejour(int $id) {
     global $connexion;
 
     $query = "SELECT
-                depart.*
+                depart.*,
+                depart.nbre_places - IFNULL(SUM(IF(reservation.valide, reservation.nb_personne, 0)), 0) AS places_restantes
             FROM depart
-            INNER JOIN sejour ON sejour.id = depart.sejour_id          
-            WHERE sejour.id = :id;";
+            INNER JOIN sejour ON sejour.id = depart.sejour_id   
+            LEFT JOIN reservation ON reservation.depart_id = depart.id
+            WHERE sejour.id = :id
+            GROUP BY depart.id;";
     
     $stmt = $connexion->prepare($query);
     $stmt->bindParam(":id", $id);
