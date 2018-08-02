@@ -30,7 +30,9 @@ get_header($pays["nom"]);
                 <br>
                 <em><?php echo $sejour["description"]; ?></em>
                 <br> 
+                <a href="sejour.php?id=<?php echo $sejour["id"]; ?>">
                 <input type="submit" value="Choisir ce séjour">
+                </a>
             </div>
         </article>
     <?php endforeach; ?>

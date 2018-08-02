@@ -8,7 +8,7 @@ if (!isset($_GET["id"])) {
 
 $id = $_GET["id"];
 $sejour = getOneEntity("sejour", $id);
-$list_departs = getAlldeparts($id);
+$list_departs = getAllDepartsBySejour($id);
 
 
 
@@ -18,27 +18,26 @@ get_header("Accueil");
 
 <section class= "container">
     <h1><?php echo $sejour["titre"]; ?></h1>
+    <em><?php echo $sejour["duree"]; ?> jours</em>                
+    <br>
+    <em>Niveau Trek <?php echo $sejour["niveau"]; ?> /5</em>                
+    <br>
+    <em><?php echo $sejour["description"]; ?></em>
 
     <?php foreach ($list_departs as $depart) : ?>
         <article>
             
-            <div>
-                <a href="utilisateur.php?id=<?php echo $sejour["id"]; ?>">
-                    <h2><?php echo $sejour["titre"]; ?></h2>
-                </a>
-                <em><?php echo $sejour["duree"]; ?> jours</em>                
-                <br>
-                <em>Niveau Trek <?php echo $sejour["niveau"]; ?> /5</em>                
-                <br>
-                <em><?php echo $sejour["description"]; ?></em>
+            <div>    
                 <br>
                 <em>Départ le <?php echo $depart["date_depart"]; ?></em>
                 <br>
+                <em><?php echo $depart["nbre_places"]; ?> places</em>
+                <br>
                 <em><?php echo $depart["prix"]; ?> €</em>
                 <br> 
-                <input type="submit" value="Réserver">
-               
-                
+                <a href="insert_reservation.php?id=<?php echo $insert_reservation["id"]; ?>">
+                    <input type="submit" value="Réserver">
+                </a>  
             </div>
         </article>
     <?php endforeach; ?>

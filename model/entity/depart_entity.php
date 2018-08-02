@@ -17,6 +17,22 @@ function getAllDeparts() {
     return $stmt->fetchAll();
 }
 
+function getAllDepartsBySejour(int $id) {
+    global $connexion;
+
+    $query = "SELECT
+                depart.*
+            FROM depart
+            INNER JOIN sejour ON sejour.id = depart.sejour_id          
+            WHERE sejour.id = :id;";
+    
+    $stmt = $connexion->prepare($query);
+    $stmt->bindParam(":id", $id);
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}
+
 function insertDepart(string $date_depart, string $prix, string $nbre_places, int $sejour_id): int {
     /* @var $connexion PDO */
     global $connexion;
